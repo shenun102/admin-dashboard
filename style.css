@@ -18,21 +18,88 @@ body {
 
 .header {
   grid-column: 2 / 3;
+  background-color: #eef2ff;
+  border-bottom: 4px solid #d6d9e4;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
+.header-top {
+  height: 100%;
+  width: 100%;
+  grid-row: 1/2;
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+  align-items: center;
+}
+
+.top-left-side {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto 1fr;
+  padding-left: 50px;
+}
+
+.top-left-side > #search {
+  background-color: #c8cfe7;
+  padding: 4px;
+  height: 1.25rem;
+  width: 40rem;
+  border: 0;
+  border-radius: 15px;
+}
+
+.top-right-side {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 25px;
+  justify-self: right;
+  padding-right: 50px;
+  align-items: center;
+}
+
+.user-profile > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.user-name {
+  font-weight: 700;
+}
+
+.header-bottom {
+  grid-row: 2/3;
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+  align-items: center;
+}
+
+.bottom-left-side {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 15px;
+  padding-left: 4rem;
+}
+
+.user-profile-2 > img {
+  width: 4rem;
+  height: 4rem;
+}
 /* Sidebar */
 
 .sidebar {
   height: 100%;
-  background-color: #4f46e5;
+  background-color: #a5b4fc;
   grid-row: 1 / 3;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 6fr 8fr;
+  gap: 20px;
 }
 
 .logo {
-  color: white;
+  color: black;
   display: grid;
   grid-template-columns: 1fr 4fr;
   justify-content: center;
@@ -44,9 +111,8 @@ body {
 .logo-text {
   font-size: 1.75rem;
   font-weight: 700;
-  color: white;
+  color: black;
 }
-
 
 .top-links > ul {
   height: 100%;
@@ -57,24 +123,38 @@ body {
   gap: 15px;
 }
 
-.top-links > ul > li {
+.top-links > ul > li,
+.bottom-links > ul > li {
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
-  color: white;
+  color: black;
 }
 
 .bottom-links > ul {
   height: 100%;
+  margin: 0;
+  padding-top: 20px;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-rows: repeat(3, 0.6fr) 4fr;
+  gap: 15px;
 }
 
 /* Main */
 
 .main {
+  max-height: 100%;
+  background-color: #e0e7ff;
   grid-column: 2/-1;
   display: grid;
   grid-template-columns: 3fr 1fr;
   padding: 20px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Miscaellaneous */
